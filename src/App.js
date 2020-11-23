@@ -16,7 +16,7 @@ export default function App() {
   function reset() {
     document.getElementById("out").value = "";
     document.getElementById("in").value = "";
-    words=[];
+    words = [];
   }
 
   function replace() {
@@ -28,7 +28,7 @@ export default function App() {
 
   function noReplace() {
     pos = Math.floor(Math.random() * words.length);
-    word = words.pop(pos);
+    word = words.splice(pos, 1);
     if (word && word.length > 0) alert(word);
     document.getElementById("out").value = words;
   }
@@ -76,13 +76,19 @@ export default function App() {
       <br />
       <h1> Contributions</h1>
       <p>
-      This assignment was a joint collaboration between Saim Sandhu, Abdallah Soliman, and Nooreldean Koteb. 
-      Nooreldean and Abdallah coded the the main features, and Saim guided them through the requirements and wrote the collaboration summary.
-
-      
+        This assignment was a joint collaboration between Saim Sandhu, Abdallah
+        Soliman, and Nooreldean Koteb. Nooreldean and Abdallah coded the the
+        main features, and Saim guided them through the requirements and wrote
+        the collaboration summary.
       </p>
-      <p>SWEGang<sup>©</sup> 2020. All Rights (NOT) Reserved..... maybe.... perhaps</p>
-      <img src="https://i.pinimg.com/originals/b6/d0/61/b6d0618441840d0f4522cecbef21701e.png"/>
+      <p>
+        SWEGang<sup>©</sup> 2020. All Rights (NOT) Reserved..... maybe....
+        perhaps
+      </p>
+      <img
+        src="https://i.pinimg.com/originals/b6/d0/61/b6d0618441840d0f4522cecbef21701e.png"
+        alt="maybe"
+      />
     </div>
   );
 }
